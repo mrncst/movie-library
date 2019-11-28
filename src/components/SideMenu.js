@@ -1,37 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { bubble as Menu } from 'react-burger-menu';
 
 const SideMenu = () => {
-    
+
     return (
         <div className="side-menu">
-            <h2>Discover</h2>
-            <ul>
-                <li><NavLink to='/popular' activeClassName='selected'>Popular</NavLink></li>
-                <li><NavLink to='/top-rated'>Top Rated</NavLink></li>
-            </ul>
-            <h2>Genres</h2>
-            <ul>
-                <li><NavLink to='/popular'>Action</NavLink></li>
-                <li><NavLink to='/popular'>Adventure</NavLink></li>
-                <li><NavLink to='/popular'>Animation</NavLink></li>
-                <li><NavLink to='/popular'>Comedy</NavLink></li>
-                <li><NavLink to='/popular'>Crime</NavLink></li>
-                <li><NavLink to='/popular'>Documentary</NavLink></li>
-                <li><NavLink to='/popular'>Drama</NavLink></li>
-                <li><NavLink to='/popular'>Family</NavLink></li>
-                <li><NavLink to='/popular'>Fantasy</NavLink></li>
-                <li><NavLink to='/popular'>History</NavLink></li>
-                <li><NavLink to='/popular'>Horror</NavLink></li>
-                <li><NavLink to='/popular'>Music</NavLink></li>
-                <li><NavLink to='/popular'>Mystery</NavLink></li>
-                <li><NavLink to='/popular'>Romance</NavLink></li>
-                <li><NavLink to='/popular'>Science Fiction</NavLink></li>
-                <li><NavLink to='/popular'>TV Movie</NavLink></li>
-                <li><NavLink to='/popular'>Thriller</NavLink></li>
-                <li><NavLink to='/popular'>War</NavLink></li>
-                <li><NavLink to='/popular'>Western</NavLink></li>
-            </ul>
+            <Menu left width={ '40%' } className='bm-hamb-menu' >
+            <img className='bm-logo' src={require('../images/oculos.svg')} />
+                <h2>DISCOVER</h2>
+                    <NavLink to='/discover/popular' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/fire.svg')} />Popular</NavLink>
+                    <NavLink to='/discover/top-rated' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/medal.svg')} />Top Rated</NavLink>
+                    <NavLink to='/discover/surprise-me' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/gift.svg')} />Surprise Me</NavLink>
+                <h2>GENRES</h2>
+                    <NavLink to='/genres/action' activeClassName='bm-selected'>Action</NavLink>
+                    <NavLink to='/genres/animation' activeClassName='bm-selected'>Animation</NavLink>
+                    <NavLink to='/genres/comedy' activeClassName='bm-selected'>Comedy</NavLink>
+                    <NavLink to='/genres/crime' activeClassName='bm-selected'>Crime</NavLink>
+                    <NavLink to='/genres/documentary' activeClassName='bm-selected'>Documentary</NavLink>
+                    <NavLink to='/genres/drama' activeClassName='bm-selected'>Drama</NavLink>
+                    <NavLink to='/genres/family' activeClassName='bm-selected'>Family</NavLink>
+                    <NavLink to='/genres/horror' activeClassName='bm-selected'>Horror</NavLink>
+                    <NavLink to='/genres/music' activeClassName='bm-selected'>Music</NavLink>
+                    <NavLink to='/genres/mistery' activeClassName='bm-selected'>Mystery</NavLink>
+                    <NavLink to='/genres/romance' activeClassName='bm-selected'>Romance</NavLink>
+                    <NavLink to='/genres/scifi' activeClassName='bm-selected'>Sci-Fi</NavLink>
+                    <NavLink to='/genres/thriller' activeClassName='bm-selected'>Thriller</NavLink>
+                    <NavLink to='/genres/war' activeClassName='bm-selected'>War</NavLink>
+            </Menu>
         </div>
 
 )};

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $font-family--title;
+    font-weight: $font-weight--title;
+    color: $color--font-default;
+    margin-left: 25px;
+}
