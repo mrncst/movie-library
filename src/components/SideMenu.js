@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { bubble as Menu } from 'react-burger-menu';
 
 const SideMenu = () => {
@@ -9,11 +9,10 @@ const SideMenu = () => {
             <Menu left width={ '40%' } className='bm-hamb-menu' >
             <img className='bm-logo' src={require('../images/oculos.svg')} />
                 <h2>DISCOVER</h2>
-                    <NavLink to='/discover/popular' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/fire.svg')} />Popular</NavLink>
-                    <NavLink to='/discover/top-rated' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/medal.svg')} />Top Rated</NavLink>
+                    <NavLink to='/discover/popular' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/fire.svg')} />Trending</NavLink>
                     <NavLink to='/discover/surprise-me' activeClassName='bm-selected'><img className='bm-icon' src={require('../images/gift.svg')} />Surprise Me</NavLink>
                 <h2>GENRES</h2>
-                    <NavLink to='/genres/action' activeClassName='bm-selected'>Action</NavLink>
+                    <NavLink to='/genres' activeClassName='bm-selected'>Action</NavLink>
                     <NavLink to='/genres/animation' activeClassName='bm-selected'>Animation</NavLink>
                     <NavLink to='/genres/comedy' activeClassName='bm-selected'>Comedy</NavLink>
                     <NavLink to='/genres/crime' activeClassName='bm-selected'>Crime</NavLink>
