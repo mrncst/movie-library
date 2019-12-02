@@ -1,12 +1,13 @@
 import React, { useEffect, useContext } from 'react';
+import Loader from 'react-loader-spinner';
 import axios from 'axios';
 import MainContext from './MainContext';
+import MovieInfo from './MovieInfo';
 
 const MoviePage = (props) => {
 
     const key = process.env.REACT_APP_API_KEY;
-    const {setLoading, movieInfo, setMovieInfo} = useContext(MainContext);
-
+    const {setLoading, movieInfo, setMovieInfo, loading} = useContext(MainContext);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,20 +28,24 @@ const MoviePage = (props) => {
             }});
 
             setLoading(false);
-
-            console.log(result);
         };
         
         fetchData();
+        window.scrollTo(0,0);
         
-    }, []);  
-    
-    console.log(movieInfo);
-
+    }, [props.location]);  
 
     return(
         <div>
-            <h1>Teste</h1>
+        {loading ? <Loader type='Grid' 
+        color='#6200EE' 
+        height={100}
+        width={100}
+        timeout={3000}/> :
+        <MovieInfo title = {movieInfo.title} posterPath = {movieInfo.posterPath} 
+        averageScore = {movieInfo.voteAverage} overview = {movieInfo.overview} 
+        genres = {movieInfo.genres} runtime = {movieInfo.runtime} 
+        language =  {movieInfo.language} year = {movieInfo.year} />}
         </div>
 
 )};

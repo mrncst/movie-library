@@ -1,18 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import FilmBox from './FilmBox';
 import MainContext from './MainContext';
 
-const TrendingPage = () => {
-    
-    const key = process.env.REACT_APP_API_KEY;
+const TrendingPage = (props) => {
 
-    const {trending, loading} = useContext(MainContext);
+    const key = process.env.REACT_APP_API_KEY;
+    const {setLoading, setTrending, loading, trending} = useContext(MainContext);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${key}`);
+            setLoading(true);
+            setTrending(result.data.results);
+            setLoading(false);
+    
+        };
+        
+        fetchData();
+        
+    }, [props.location]);
 
     return (
-        <div>
+        <div className='container-gallery-page'>
             <h1>TRENDING</h1>
-            <div className='loader'>
+            <div className='loader container-gallery'>
             {loading ? <Loader type='Grid' 
                         color='#6200EE' 
                         height={100}

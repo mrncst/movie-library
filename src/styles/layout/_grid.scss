@@ -9,3 +9,15 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px repeat(auto-fill, 100px);
 }
+
+.container-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-gallery-page {
+    width: 100%;
+}
+

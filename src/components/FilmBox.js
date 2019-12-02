@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FilmBox = (props) => {
@@ -7,7 +7,7 @@ const FilmBox = (props) => {
 
     return (
         <div className='film'>
-            <Link to={`/movie/${id}`}><img  className='film-poster' src={`https://image.tmdb.org/t/p/w500${posterPath}`} /></Link>
+            <Link to={`/movie/${id}`}><img  className='film-poster' src={`https://image.tmdb.org/t/p/w500${posterPath}`} alt = 'Movie poster'/></Link>
             <h3 className='film-name'>{name}</h3>
             <p className='film-score'><span className='film-score-highlight'>{averageScore}</span> / 10</p>
         </div>

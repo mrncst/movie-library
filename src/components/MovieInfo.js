@@ -1,48 +1,17 @@
-import React, { useEffect, useContext } from 'react';
-import axios from 'axios';
-import MainContext from './MainContext';
+import React from 'react';
+import BackButton from './BackButton';
 
-const MovieInfo= (props) => {
-
-    const key = process.env.REACT_APP_API_KEY;
-    const {setLoading, movieInfo, setMovieInfo} = useContext(MainContext);
-
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const id = props.location.pathname.split('/')[2];
-            setLoading(true);
-            const result = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`);
-
-            setMovieInfo(() => { 
-                return {
-                title: result.data.title, 
-                overview: result.data.overview,
-                genres: result.data.genres,
-                runtime: result.data.runtime,
-                posterPath: result.data.poster_path,
-                voteAverage: result.data.vote_average,
-                language: result.data.spoken_languages[0].name,
-                year: result.data.release_date.split('-')[0]
-            }});
-
-            setLoading(false);
-
-            console.log(result);
-        };
-        
-        fetchData();
-        
-    }, []);  
-    
-    console.log(movieInfo);
-
+const MovieInfo = (props) => {
 
     return(
         <div>
-            <h1>{movieInfo.title}</h1>
+            <BackButton />
+            <img  className='film-poster' src={`https://image.tmdb.org/t/p/w500${props.posterPath}`} alt='Movie poster'/>
+            <h3>{props.title}</h3>
+            <p>{props.language} / {props.runtime} min. / {props.year}</p>
+            <p>{props.averageScore} / 10</p>
+            <p>{props.overview}</p>
         </div>
-
 )};
 
 export default MovieInfo;

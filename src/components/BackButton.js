@@ -1,14 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BackButton = () => {
 
-    
-
     return(
         <React.Fragment>
-            <button className='back-button'>BACK</button>
+            <Link to='/'><button className='back-button'>BACK</button></Link>
         </React.Fragment>
-
 )};
 
-export default BackButton
+export default BackButton;
