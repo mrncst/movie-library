@@ -6,6 +6,7 @@ import MoviePage from './components/MoviePage';
 import GenresPage from './components/GenresPage';
 import MainContext from './components/MainContext';
 import SurpriseMePage from './components/SurpriseMePage';
+import FadeIn from 'react-fade-in';
 
 const App = () => {
   
@@ -14,9 +15,11 @@ const App = () => {
     const [movieInfo, setMovieInfo] = useState({title: '', overview: '', runtime: '', genres: '', 
                                                 posterPath: '', year: '', voteAverage: '', language: ''});
     const [genreIdMain, setGenreId] = useState('');
+    const [disable, setDisable] = useState(true);
 
     const value = {
-      movieInfo, setMovieInfo, trending, loading, setTrending, setLoading, setGenreId, genreIdMain
+      movieInfo, setMovieInfo, trending, loading, setTrending, 
+      setLoading, setGenreId, genreIdMain, disable, setDisable
     };
     
   return (
@@ -26,12 +29,14 @@ const App = () => {
           <Header/>
           <div className='page-area'>
             <Switch>
+              <FadeIn>
               <Route exact path='/' component={TrendingPage} />
               <Route path='/movie' component={MoviePage} />
               <Route path='/genres' component={GenresPage} />
               <Route exact path='/discover/surprise-me' component={SurpriseMePage} />
               <Route exact path='/discover/popular' component={TrendingPage} />
-            </Switch>
+              </FadeIn>
+              </Switch>
           </div>
         </div>
       </BrowserRouter>

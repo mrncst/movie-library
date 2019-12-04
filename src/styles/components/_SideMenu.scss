@@ -1,10 +1,15 @@
 .bm {
+
     &-burger-button {
         position: absolute;
         width: 26px;
         height: 20px;
         left: 25px;
         top: 25px; 
+
+        @include media-query-desk {
+            display: none;
+        }
     }
 
     &-burger-bars {
@@ -43,6 +48,10 @@
 
     &-hamb-menu {
         text-align: left;
+
+        @include media-query-desk {
+            display: none;
+        }
     
         & h2 {
             margin-top: 30px;
@@ -81,4 +90,6 @@
     }
 
 }
+
+
 

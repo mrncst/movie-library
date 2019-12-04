@@ -1,4 +1,8 @@
 .film {
+
+    text-align: center;
+    width: 300px;
+
     &-poster {
         width: 200px;
         border-radius: 30px;
@@ -8,11 +12,14 @@
 
     &-name {
         font-family: $font-family--text;
+        color: $color--font-default;
     }
 
     &-score {
         font-family: $font-family--text;
         font-size: 0.8rem;
+        color: $color--font-default;
+        margin-bottom: 30px;
 
         &-highlight {
             font-size: 1.2rem;

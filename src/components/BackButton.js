@@ -5,7 +5,7 @@ const BackButton = () => {
 
     return(
         <React.Fragment>
-            <Link to='/'><button className='back-button'>BACK</button></Link>
+            <Link to='/'><button className='movie-info-container-back-button'>BACK</button></Link>
         </React.Fragment>
 )};
 

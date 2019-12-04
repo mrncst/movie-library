@@ -24,7 +24,7 @@ const TrendingPage = (props) => {
 
     return (
         <div className='container-gallery-page'>
-            <h1>TRENDING</h1>
+            <h1>TRENDING THIS WEEK</h1>
             <div className='loader container-gallery'>
             {loading ? <Loader type='Grid' 
                         color='#6200EE' 

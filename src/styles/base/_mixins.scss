@@ -1,0 +1,5 @@
+@mixin media-query-desk {
+    @media (min-width:780px) {
+        @content;
+    }
+}

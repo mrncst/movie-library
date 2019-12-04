@@ -4,13 +4,15 @@ import BackButton from './BackButton';
 const MovieInfo = (props) => {
 
     return(
-        <div>
+        <div className='movie-info-container'>
             <BackButton />
-            <img  className='film-poster' src={`https://image.tmdb.org/t/p/w500${props.posterPath}`} alt='Movie poster'/>
-            <h3>{props.title}</h3>
-            <p>{props.language} / {props.runtime} min. / {props.year}</p>
-            <p>{props.averageScore} / 10</p>
-            <p>{props.overview}</p>
+            <div className='movie-info-container-info'>
+                <img className='film-poster' src={`https://image.tmdb.org/t/p/w500${props.posterPath}`} alt='Movie poster'/>
+                <h3>{props.title}</h3>
+                <p>{props.language} / {props.year}</p>
+                <p>{props.averageScore} / 10</p>
+                <p>{props.overview}</p>
+            </div>
         </div>
 )};
 

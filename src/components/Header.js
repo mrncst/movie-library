@@ -1,16 +1,13 @@
 import React from 'react';
 import SideMenu from './SideMenu';
+import LateralMenu from './LateralMenu';
 
 const Header = () => {
 
-    const displaySearch = () => {
-        
-    };
-
     return (
         <div className='header'>
+            <LateralMenu/>
             <SideMenu />
-            <img className='icon-glass' onClick = {displaySearch} src={require('../images/magnifying-glass.svg')} alt='Search Icon'/>
         </div>
         
 )};

@@ -98,11 +98,11 @@ const GenresPage = (props) => {
         <div className='container-gallery-page'>
             <h1>{genre.toUpperCase()}</h1>
             <div className='loader container-gallery'>
-            {loading ? <Loader type='Grid' 
+            {loading ? <Loader className = 'loader' type='Grid' 
                         color='#6200EE' 
                         height={100}
                         width={100}
-                        timeout={3000}/> :
+                        timeout={5000}/> :
                         trending.map((item, i) => <FilmBox name = {item.original_title} posterPath = {item.poster_path} averageScore = {item.vote_average} id = {item.id} key={i} />)}
             </div>
         </div>

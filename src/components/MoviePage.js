@@ -36,7 +36,7 @@ const MoviePage = (props) => {
     }, [props.location]);  
 
     return(
-        <div>
+        <div className='movie-page'>
         {loading ? <Loader type='Grid' 
         color='#6200EE' 
         height={100}

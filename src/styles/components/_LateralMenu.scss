@@ -1,0 +1,44 @@
+.LateralMenu {
+    display: none;
+
+    @include media-query-desk {
+        text-align: center;
+        align-items: center;
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+            margin-top: 30px;
+            font-size: 1.4rem;
+            font-family: $font-family--title;
+            font-weight: $font-weight--title;
+            color: $color--font-default;
+        }
+
+        & a {
+            padding: 10px 0 10px 5px;
+            width: 100px;
+            font-size: 0.7rem;
+            font-family: $font-family--text;
+            font-weight: $font-weight--text;
+            color: $color--font-default;
+            margin-top: 10px;
+        }
+
+        &-selected {
+            border: 1px solid $color--font-default;
+            border-radius: 10px;
+        }
+        
+
+        &-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            fill: #6200EE!important;
+            stroke: #6200EE!important;
+        }
+    }
+
+}
