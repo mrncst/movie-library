@@ -1,0 +1,36 @@
+.SurpriseMePage {
+    width: 60%;
+}
+
+.surprise-me {
+
+    &-input {
+        border-radius: 30px;
+        border: 1px solid $color--font-default;
+        padding: 10px;
+    }
+
+    &-form {
+        text-align: center;
+    }
+
+    &-text {
+    font-size: 1.4rem;
+    margin-left: 28px;
+    font-family: $font-family--title;
+    color: $color--font-default;
+    }
+
+    &-button {
+        margin-left: 28px;
+        font-family: $font-family--title;
+        color: $color--font-default;
+        margin-bottom: 25px;
+        border: 1px solid $color--font-default;
+        background: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+}
