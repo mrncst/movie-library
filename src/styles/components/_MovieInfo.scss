@@ -1,8 +1,61 @@
 .movie-info-container {
+  margin: 25px 0;
 
-    margin: 25px 0;
+  &-back-button {
+    font-family: $font-family--title;
+    color: $color--font-default;
+    margin-bottom: 25px;
+    border: 1px solid $color--font-default;
+    background: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
 
-    &-back-button {
+    &:hover {
+      color: #fff;
+      background: $color--font-default;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    @include media-query-desk {
+      flex-direction: row;
+      margin-top: 40px;
+
+      & .film-poster {
+        height: 500px;
+        width: auto;
+        margin-right: 100px;
+      }
+    }
+
+    & h3 {
+      font-family: $font-family--title;
+      color: $color--font-default;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    & p {
+      text-align: center;
+      font-family: $font-family--text;
+      margin-top: 5px;
+      color: $color--font-default;
+    }
+
+    &-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+
+      & a {
+        margin-left: 5px;
         font-family: $font-family--title;
         color: $color--font-default;
         margin-bottom: 25px;
@@ -12,35 +65,15 @@
         padding: 10px 20px;
         transition: all 0.2s ease-in;
         cursor: pointer;
-
         &:hover {
-            color: #fff;
-            background: $color--font-default;
+          color: #fff;
+          background: $color--font-default;
         }
+      }
     }
+  }
 
-    &-info {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-
-        & h3 {
-            font-family: $font-family--title;
-            color: $color--font-default;
-            text-align: center ;
-            margin-top: 30px;
-        }
-
-        & p {
-            text-align: center;
-            font-family: $font-family--text;
-            margin-top: 5px;
-            color: $color--font-default;
-        }
-    }
-
-.disabled {
+  .disabled {
     display: none;
-}}
-
+  }
+}

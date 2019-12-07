@@ -1,95 +1,90 @@
 .bm {
+  &-burger-button {
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    left: 25px;
+    top: 25px;
 
-    &-burger-button {
-        position: absolute;
-        width: 26px;
-        height: 20px;
-        left: 25px;
-        top: 25px; 
+    @include media-query-desk {
+      display: none;
+    }
+  }
 
-        @include media-query-desk {
-            display: none;
-        }
+  &-burger-bars {
+    background: #6200ee;
+  }
+
+  &-cross-button {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    height: 24px;
+    width: 24px;
+  }
+
+  &-item-list {
+    width: 100px;
+  }
+
+  &-menu {
+    background: #d9fff6;
+    padding: 2.5em 2em 0;
+    font-size: 1.15em;
+  }
+
+  &-cross {
+    background: #6200ee;
+  }
+
+  &-overlay {
+    background: rgba(112, 22, 240, 0.041);
+  }
+
+  &-morph-shape {
+    fill: #d9fff6;
+  }
+
+  &-hamb-menu {
+    text-align: left;
+
+    @include media-query-desk {
+      display: none;
     }
 
-    &-burger-bars {
-        background: #6200EE;
+    & h2 {
+      margin-top: 30px;
+      font-size: 1rem;
+      font-family: $font-family--title;
+      font-weight: $font-weight--title;
+      color: $color--font-default;
     }
 
-    &-cross-button {
-        position: fixed;
-        right: 25px;
-        top: 25px;
-        height: 24px;
-        width: 24px;
+    & a {
+      padding: 5px 0 5px 12px;
+      font-size: 0.7rem;
+      font-family: $font-family--text;
+      font-weight: $font-weight--text;
+      color: $color--font-default;
+      margin-top: 10px;
     }
+  }
 
-    &-item-list {
-        width: 100px;
-    }
-    
-    &-menu {
-        background: #D9FFF6;
-        padding: 2.5em 2em 0;
-        font-size: 1.15em;
-    }
+  &-logo {
+    width: 50px;
+    margin-left: 12px;
+  }
 
-    &-cross {
-        background: #6200EE;
-    }
+  &-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    fill: #6200ee !important;
+    stroke: #6200ee !important;
+  }
 
-    &-overlay {
-        background: rgba(112, 22, 240, 0.041);
-    }
-
-    &-morph-shape {
-        fill: #D9FFF6;
-    }
-
-    &-hamb-menu {
-        text-align: left;
-
-        @include media-query-desk {
-            display: none;
-        }
-    
-        & h2 {
-            margin-top: 30px;
-            font-size: 1rem;
-            font-family: $font-family--title;
-            font-weight: $font-weight--title;
-            color: $color--font-default;
-        }
-    
-        & a {
-            padding: 5px 0 5px 12px;
-            font-size: 0.7rem;
-            font-family: $font-family--text;
-            font-weight: $font-weight--text;
-            color: $color--font-default;
-            margin-top: 10px;
-        }
-    }
-
-    &-logo {
-        width: 50px;
-        margin-left: 12px;
-    }
-
-    &-icon {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-        fill: #6200EE!important;
-        stroke: #6200EE!important;
-    }
-    
-    &-selected {
-        border: 1px solid $color--font-default;
-        border-radius: 10px;
-    }
-
+  &-selected {
+    border: 1px solid $color--font-default;
+    border-radius: 10px;
+  }
 }
-
-
-

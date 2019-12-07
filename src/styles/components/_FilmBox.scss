@@ -1,28 +1,27 @@
 .film {
+  text-align: center;
+  width: 300px;
 
-    text-align: center;
-    width: 300px;
+  &-poster {
+    width: 200px;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+  }
 
-    &-poster {
-        width: 200px;
-        border-radius: 30px;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22);
-        cursor: pointer;
+  &-name {
+    font-family: $font-family--text;
+    color: $color--font-default;
+  }
+
+  &-score {
+    font-family: $font-family--text;
+    font-size: 0.8rem;
+    color: $color--font-default;
+    margin-bottom: 30px;
+
+    &-highlight {
+      font-size: 1.2rem;
     }
-
-    &-name {
-        font-family: $font-family--text;
-        color: $color--font-default;
-    }
-
-    &-score {
-        font-family: $font-family--text;
-        font-size: 0.8rem;
-        color: $color--font-default;
-        margin-bottom: 30px;
-
-        &-highlight {
-            font-size: 1.2rem;
-        }
-    }
+  }
 }
