@@ -55,28 +55,30 @@ const SurpriseMePage = () => {
   return (
     <div className="SurpriseMePage">
       <h1>SURPRISE ME</h1>
-      <form className="suprise-me-form" onSubmit={handleSurpriseSubmit}>
-        <p className="surprise-me-text">
-          I WANNA WATCH A MOVIE SIMILAR TO{" "}
-          <input className="surprise-me-input" type="text" />.
-        </p>
-        <button className="surprise-me-button">SEARCH</button>
-      </form>
-      <div>
-        {disable ? (
-          ""
-        ) : (
-          <MovieInfo
-            title={movieInfo.title}
-            posterPath={movieInfo.posterPath}
-            averageScore={movieInfo.voteAverage}
-            overview={movieInfo.overview}
-            genres={movieInfo.genres}
-            runtime={movieInfo.runtime}
-            language={movieInfo.language}
-            year={movieInfo.year}
-          />
-        )}
+      <div className="surprise-me-box">
+        <form className="suprise-me-form" onSubmit={handleSurpriseSubmit}>
+          <p className="surprise-me-text">
+            I WANNA WATCH A MOVIE SIMILAR TO&nbsp;&nbsp;{" "}
+            <input className="surprise-me-input" type="text" />
+          </p>
+          <button className="surprise-me-button">SEARCH</button>
+        </form>
+        <div>
+          {disable ? (
+            ""
+          ) : (
+            <MovieInfo
+              title={movieInfo.title}
+              posterPath={movieInfo.posterPath}
+              averageScore={movieInfo.voteAverage}
+              overview={movieInfo.overview}
+              genres={movieInfo.genres}
+              runtime={movieInfo.runtime}
+              language={movieInfo.language}
+              year={movieInfo.year}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

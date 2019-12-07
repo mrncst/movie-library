@@ -3,10 +3,13 @@
 }
 
 .surprise-me {
+  text-align: center;
+
   &-input {
     border-radius: 30px;
     border: 1px solid $color--font-default;
     padding: 10px;
+    margin-top: 20px;
   }
 
   &-form {
@@ -14,7 +17,7 @@
   }
 
   &-text {
-    font-size: 1.4rem;
+    font-size: 1em;
     margin-left: 28px;
     font-family: $font-family--title;
     color: $color--font-default;
