@@ -14,12 +14,14 @@ const MoviePage = props => {
     const fetchData = async () => {
       const id = props.location.pathname.split("/")[2];
       setLoading(true);
-      const result = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`
-      );
-      const trailer = await axios.get(
-        `http://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}`
-      );
+      const [result, trailer] = await Promise.all([
+        axios.get(
+          `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`
+        ),
+        axios.get(
+          `http://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}`
+        )
+      ]);
 
       setMovieInfo(() => {
         return {

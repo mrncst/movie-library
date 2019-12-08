@@ -117,7 +117,7 @@ const GenresPage = props => {
             timeout={5000}
           />
         ) : (
-          trending.map((item, i) => (
+          trending.map(item => (
             <FilmBox
               name={item.original_title}
               posterPath={item.poster_path}

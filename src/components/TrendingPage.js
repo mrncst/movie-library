@@ -16,7 +16,8 @@ const TrendingPage = props => {
         `https://api.themoviedb.org/3/trending/all/week?api_key=${key}`
       );
       setLoading(true);
-      setTrending(result.data.results);
+      setTrending([...result.data.results]);
+      console.log([...result.data.results]);
       setLoading(false);
     };
 
@@ -36,7 +37,7 @@ const TrendingPage = props => {
             timeout={3000}
           />
         ) : (
-          trending.map((item, i) => (
+          trending.map(item => (
             <FilmBox
               name={item.original_title}
               posterPath={item.poster_path}
