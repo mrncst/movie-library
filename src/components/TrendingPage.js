@@ -17,7 +17,6 @@ const TrendingPage = props => {
       );
       setLoading(true);
       setTrending([...result.data.results]);
-      console.log([...result.data.results]);
       setLoading(false);
     };
 
