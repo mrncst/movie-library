@@ -13,7 +13,7 @@ const TrendingPage = props => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get(
-        `https://api.themoviedb.org/3/trending/all/week?api_key=${key}`
+        `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`
       );
       setLoading(true);
       setTrending([...result.data.results]);
@@ -25,7 +25,7 @@ const TrendingPage = props => {
 
   return (
     <div className="container-gallery-page">
-      <h1>TRENDING THIS WEEK</h1>
+      <h1>TRENDING</h1>
       <div className="loader container-gallery">
         {loading ? (
           <Loader
