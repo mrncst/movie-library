@@ -22,7 +22,6 @@ const MoviePage = props => {
           `http://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}`
         )
       ]);
-
       setMovieInfo(() => {
         return {
           title: result.data.title,
@@ -40,7 +39,6 @@ const MoviePage = props => {
       });
       setLoading(false);
     };
-
     fetchData();
     window.scrollTo(0, 0);
   }, [props.location]);
