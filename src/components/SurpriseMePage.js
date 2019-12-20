@@ -63,7 +63,7 @@ const SurpriseMePage = () => {
           </p>
           <button className="surprise-me-button">SEARCH</button>
         </form>
-        <div>
+        <div className="surprise-me-movie-info">
           {disable ? (
             ""
           ) : (

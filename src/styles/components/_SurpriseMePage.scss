@@ -35,4 +35,10 @@
     transition: all 0.2s ease-in;
     cursor: pointer;
   }
+
+  &-movie-info {
+    @include media-query-desk {
+      margin-left: 30px;
+    }
+  }
 }
