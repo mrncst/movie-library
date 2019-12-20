@@ -1,6 +1,10 @@
 .movie-info-container {
   margin: 25px 0;
 
+  @include media-query-desk {
+    width: 90%;
+  }
+
   &-back-button {
     font-family: $font-family--title;
     color: $color--font-default;
